@@ -1,13 +1,11 @@
-package com.preschool.demo.Data.Entity;
+package com.preschool.demo.data.entity;
 
 import java.time.ZonedDateTime;
-import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
 import lombok.Data;
-import org.springframework.core.style.ToStringCreator;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;

@@ -1,6 +1,6 @@
-package com.preschool.demo.Data.Entity.User;
+package com.preschool.demo.data.entity.user;
 
-import com.preschool.demo.Data.Entity.BaseEntity;
+import com.preschool.demo.data.entity.BaseEntity;
 import com.sun.istack.NotNull;
 import lombok.Data;
 

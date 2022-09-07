@@ -1,7 +1,6 @@
-package com.preschool.demo.Data.Entity;
+package com.preschool.demo.data.entity;
 
 import java.io.Serializable;
-import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +11,6 @@ import javax.persistence.MappedSuperclass;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
-import org.springframework.core.style.ToStringCreator;
 
 @MappedSuperclass
 @Inheritance(
