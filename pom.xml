@@ -20,6 +20,7 @@
 		<java.version>11</java.version>
 		<apache.poi.version>4.0.1</apache.poi.version>
 		<apache.poi.ooxml-schema.version>1.4</apache.poi.ooxml-schema.version>
+		<mapstruct.version>1.4.1.Final</mapstruct.version>
 	</properties>
 
 	<dependencies>
@@ -79,6 +80,19 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.12.0</version>
+		</dependency>
+
+		<!-- MAPSTRUCT -->
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${mapstruct.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${mapstruct.version}</version>
 		</dependency>
 
 	</dependencies>

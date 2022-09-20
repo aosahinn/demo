@@ -4,7 +4,9 @@ import com.preschool.demo.data.entity.BaseEntity;
 import com.sun.istack.NotNull;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name= "users")
@@ -26,4 +28,8 @@ public class User extends BaseEntity {
     private String email;
 
     private boolean active;
+
+    public User() {
+
+    }
 }
