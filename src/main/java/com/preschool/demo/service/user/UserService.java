@@ -1,5 +1,6 @@
 package com.preschool.demo.service.user;
 
+import com.preschool.demo.common.exceptions.UserNotFoundException;
 import com.preschool.demo.controller.mapper.UserMapper;
 import com.preschool.demo.data.entity.user.User;
 import com.preschool.demo.data.repository.BaseRepository;
@@ -34,8 +35,9 @@ public class UserService extends AbstractEntityService<User, String> {
         return super.verifyPut(theReal, forSave);
     }
 
-    public Optional<User> findById(String id) {
-        return userRepository.findById(id);
+    public User findById(String id) {
+        Optional<User> user = userRepository.findById(id);
+        return user.stream().findFirst().orElseThrow(() -> new UserNotFoundException("Kullanıcı Bulunamadı."));
     }
 
     public Optional<User> findByUsername(String username) {
