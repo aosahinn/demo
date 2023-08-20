@@ -1,4 +1,4 @@
-package com.preschool.demo.service.user;
+package com.preschool.demo.service;
 
 import com.preschool.demo.common.exceptions.ResourceNotFoundException;
 import com.preschool.demo.data.entity.BaseEntity;
@@ -79,7 +79,9 @@ public abstract class AbstractEntityService<T extends BaseEntity, PK extends Ser
         return this.getRepository().findAll();
     }
 
-    /** @deprecated */
+    /**
+     * @deprecated
+     */
     @Deprecated
     public Page<T> pageable(String tenantId, Pageable pageable) {
         Page resp;
@@ -87,7 +89,7 @@ public abstract class AbstractEntityService<T extends BaseEntity, PK extends Ser
             Specification<T> specification = (root, criteriaQuery, criteriaBuilder) -> {
                 List<Predicate> predicates = new ArrayList();
                 predicates.add(criteriaBuilder.equal(root.get("tenantId"), tenantId));
-                return criteriaBuilder.and((Predicate[])predicates.toArray(new Predicate[predicates.size()]));
+                return criteriaBuilder.and((Predicate[]) predicates.toArray(new Predicate[predicates.size()]));
             };
             resp = this.getRepository().findAll(specification, pageable);
         } else {

@@ -1,26 +1,32 @@
-package com.preschool.demo.controller.resource;
+package com.preschool.demo.controller.base;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import java.io.Serializable;
-import java.time.ZonedDateTime;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@JsonInclude(Include.NON_NULL)
+import java.io.Serializable;
+import java.time.ZonedDateTime;
+
+/**
+ * Abstract Resource
+ */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AbstractResource implements Serializable {
+
     protected String identifier;
+
     protected Long rowVersion;
+
     protected ZonedDateTime createdDate;
+
     protected ZonedDateTime lastModifiedDate;
+
     protected String createdBy;
+
     protected String lastModifiedBy;
 
-    public AbstractResource() {
-    }
-
     public String getIdentifier() {
-        return this.identifier;
+        return identifier;
     }
 
     public void setIdentifier(String identifier) {
@@ -28,7 +34,7 @@ public class AbstractResource implements Serializable {
     }
 
     public Long getRowVersion() {
-        return this.rowVersion;
+        return rowVersion;
     }
 
     public void setRowVersion(Long rowVersion) {
@@ -36,7 +42,7 @@ public class AbstractResource implements Serializable {
     }
 
     public ZonedDateTime getCreatedDate() {
-        return this.createdDate;
+        return createdDate;
     }
 
     public void setCreatedDate(ZonedDateTime createdDate) {
@@ -44,7 +50,7 @@ public class AbstractResource implements Serializable {
     }
 
     public ZonedDateTime getLastModifiedDate() {
-        return this.lastModifiedDate;
+        return lastModifiedDate;
     }
 
     public void setLastModifiedDate(ZonedDateTime lastModifiedDate) {
@@ -52,7 +58,7 @@ public class AbstractResource implements Serializable {
     }
 
     public String getCreatedBy() {
-        return this.createdBy;
+        return createdBy;
     }
 
     public void setCreatedBy(String createdBy) {
@@ -60,25 +66,32 @@ public class AbstractResource implements Serializable {
     }
 
     public String getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return lastModifiedBy;
     }
 
     public void setLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
     }
 
+    @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        } else if (o != null && this.getClass() == o.getClass()) {
-            AbstractResource that = (AbstractResource)o;
-            return (new EqualsBuilder()).appendSuper(super.equals(o)).append(this.identifier, that.identifier).isEquals();
-        } else {
-            return false;
-        }
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AbstractResource that = (AbstractResource) o;
+
+        return new EqualsBuilder()
+                .appendSuper(super.equals(o))
+                .append(identifier, that.identifier)
+                .isEquals();
     }
 
+    @Override
     public int hashCode() {
-        return (new HashCodeBuilder(17, 37)).appendSuper(super.hashCode()).append(this.identifier).toHashCode();
+        return new HashCodeBuilder(17, 37)
+                .appendSuper(super.hashCode())
+                .append(identifier)
+                .toHashCode();
     }
 }

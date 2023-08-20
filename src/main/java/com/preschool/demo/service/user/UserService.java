@@ -4,6 +4,7 @@ import com.preschool.demo.controller.mapper.UserMapper;
 import com.preschool.demo.data.entity.user.User;
 import com.preschool.demo.data.repository.BaseRepository;
 import com.preschool.demo.data.repository.user.UserRepository;
+import com.preschool.demo.service.AbstractEntityService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

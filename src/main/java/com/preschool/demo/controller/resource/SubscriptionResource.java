@@ -6,17 +6,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.ZonedDateTime;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserResource extends AbstractResource {
+public class SubscriptionResource extends AbstractResource {
 
-    private String firstName;
-    private String lastName;
-    private String username;
-    private String password;
-    private String email;
-    private boolean active;
+    private String companyId;
+    private String packageId;
+    private ZonedDateTime startDate;
+    private ZonedDateTime endDate;
 
 }
