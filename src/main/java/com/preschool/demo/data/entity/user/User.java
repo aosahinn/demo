@@ -2,7 +2,9 @@ package com.preschool.demo.data.entity.user;
 
 import com.preschool.demo.data.entity.BaseEntity;
 import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -12,6 +14,8 @@ import javax.persistence.Table;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "USERS_V1")
 public class User extends BaseEntity {
 
@@ -31,7 +35,4 @@ public class User extends BaseEntity {
 
     private boolean active;
 
-    public User() {
-
-    }
 }

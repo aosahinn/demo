@@ -1,8 +1,9 @@
 package com.preschool.demo.data.entity.subscription;
 
 import com.preschool.demo.data.entity.BaseEntity;
-import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -13,7 +14,9 @@ import java.time.ZonedDateTime;
 @Entity
 @Getter
 @Setter
-@Table(name= "SUBSCRIPTION")
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "SUBSCRIPTION")
 public class Subscription extends BaseEntity {
 
     //TODO: COMPANY ENTITY'SI OLUSTURULUNCA TANIMLANACAK
@@ -30,7 +33,4 @@ public class Subscription extends BaseEntity {
     @Column(name = "end_date")
     private ZonedDateTime endDate;
 
-    public Subscription() {
-
-    }
 }
