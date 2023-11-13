@@ -16,6 +16,7 @@ public class SubscriptionDto extends AbstractDto {
 
     private String companyId;
     private String packageId;
+    private String customerId;
     private ZonedDateTime startDate;
     private ZonedDateTime endDate;
 

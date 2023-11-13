@@ -22,11 +22,11 @@ public class Subscription extends BaseEntity {
 
     @OneToOne
     @JoinColumn(name = "company_id")
-    private Company companyId;
+    private Company company;
 
     @OneToOne
     @JoinColumn(name = "customer_id")
-    private Customer customerId;
+    private Customer customer;
 
     @OneToOne
     @JoinColumn(name = "pack_id", foreignKey = @ForeignKey(name = "FK_SUBCRIPTION_PACK_TB_M"))

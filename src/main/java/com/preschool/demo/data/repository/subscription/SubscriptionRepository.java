@@ -8,9 +8,4 @@ import java.util.Optional;
 
 @Repository
 public interface SubscriptionRepository extends BaseRepository<Subscription, String> {
-
-    Optional<Subscription> findByCompanyId(String companyId);
-
-    Optional<Subscription> findByPackageId(String packageId);
-
 }

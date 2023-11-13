@@ -37,10 +37,12 @@ public class SubscriptionService extends AbstractEntityService<Subscription, Str
     public Optional<Subscription> findById(String id) {
         return repository.findById(id);
     }
+/*
 
     public Optional<Subscription> findByUsername(String companyId) {
         return repository.findByCompanyId(companyId);
     }
+*/
 
 
 }
