@@ -2,7 +2,6 @@ package com.preschool.demo;
 
 import com.preschool.demo.data.entity.user.User;
 import com.preschool.demo.service.user.UserService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,18 +21,20 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+/*
 
 		User user = new User();
 		user.setFirstName("oguz");
 		user.setLastName("sahin");
 		user.setUsername("aos316");
 		user.setPassword("password");
+		user.setEmail("selen18170@gmail.com");
 
 		userService.save(user);
 		Optional<User> find = userService.findByUsername("aos316");
 
-		System.out.println("aos316 aranıyor: {}" + find);
-		//System.out.println("aos316 aranıyor: " + user);
+		System.out.println("aos316 aranıyor:" + find);
+*/
 
 	}
 }

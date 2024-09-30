@@ -1,11 +1,5 @@
-/*
 package com.preschool.demo.utils;
 
-import com.aksigorta.domain.Token;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.codec.binary.StringUtils;
-
-import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -14,7 +8,9 @@ import java.util.stream.Stream;
 public class TokenUtils {
 
     public static final String TOKEN_NAME = "Access-Token";
-    public static final String REFRESH_TOKEN_NAME = "Refresh-Token";
+    public static final String USERNAME = "username";
+    public static final String PASSWORD = "password";
+    public static final String REFRESH_TOKEN= "Refresh-Token";
     public static final String CLIENT_ID = "client-id";
     public static final String MOBILE_CLIENT = "mobile_client";
     public static final String WEB_CLIENT = "web_client";
@@ -28,7 +24,7 @@ public class TokenUtils {
     private TokenUtils() {
 
     }
-
+/*
     public static String generateToken() {
         return new BigInteger(130, random).toString(32);
     }
@@ -47,6 +43,5 @@ public class TokenUtils {
 
     public static  boolean isMobileClient(Token token){
         return MOBILE_CLIENT.equals(token.getClientId());
-    }
+    }*/
 }
-*/

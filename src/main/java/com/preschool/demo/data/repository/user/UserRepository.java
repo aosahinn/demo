@@ -13,7 +13,12 @@ public interface UserRepository extends BaseRepository<User, String> {
 
     Optional<User> findByEmail(String email);
 
-   /* class QueryGeneration extends BaseRepository.QueryGeneration {
+    Optional<User> findByFirstName(String firstname);
+
+    Optional<User> findByLastName(String lastname);
+
+
+    /* class QueryGeneration extends BaseRepository.QueryGeneration {
 
         public static Specification<User> search(UserSearchDto dto) {
             return (root, query, cb) -> {
